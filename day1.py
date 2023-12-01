@@ -15,19 +15,13 @@ def part1(x):
     digits = ""
     for line in x:
         for char in line:
-            try :
-                int(char)
+            if char.isdigit():
                 digits += char
                 break
-            except:
-                pass
         for char in reversed(line):
-            try :
-                int(char)
+            if char.isdigit():
                 digits += char
                 break
-            except:
-                pass
         sum += int(digits)
         digits = ""
     return sum
